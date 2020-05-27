@@ -1,0 +1,2 @@
+[![ahmadafrasiyab](https://circleci.com/gh/ahmadafrasiyab/funteam.svg?style=svg)](https://app.circleci.com/pipelines/github/ahmadafrasiyab/funteam)
+[![codecov](https://codecov.io/gh/ahmadafrasiyab/funteam/branch/master/graph/badge.svg)](https://codecov.io/gh/ahmadafrasiyab/funteam)
