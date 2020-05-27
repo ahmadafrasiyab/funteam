@@ -167,7 +167,7 @@ jobs:
       - *decode_gcloud_key
       - run:
           name: Set Google Cloud target project
-          command: gcloud config set project funteam-27a09
+          command: gcloud config set project funteam-27a0
       - run:
           name: Authenticate with Google Cloud
           command: gcloud auth activate-service-account firebase-adminsdk-swrwu@funteam-27a09.iam.gserviceaccount.com --key-file ${HOME}/client-secret.json
