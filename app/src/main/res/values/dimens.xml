@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tenDP">10dp</dimen>
+    <dimen name="fourtyDP">40dp</dimen>
+    <dimen name="threeHunDP">300dp</dimen>
+    <dimen name="hunEightyDP">180dp</dimen>
+    <dimen name="thirtyDP">30dp</dimen>
+    <dimen name="eightyDP">80dp</dimen>
+    <dimen name="fifteenDP">15dp</dimen>
+    <dimen name="fiftyDP">50dp</dimen>
+    <dimen name="sixtyDP">60dp</dimen>
+    <dimen name="thirtyFIveDP">35dp</dimen>
+</resources>
