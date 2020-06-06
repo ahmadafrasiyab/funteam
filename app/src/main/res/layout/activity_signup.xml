@@ -21,7 +21,7 @@
 
 
             <ImageView
-                android:layout_marginTop="@dimen/eightyDP"
+                android:layout_marginTop="@dimen/fiftyDP"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/hunEightyDP"
                 android:layout_gravity="center"
@@ -35,10 +35,16 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/name"
+                android:layout_gravity="center"/>
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
+                android:id="@+id/emailSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -46,73 +52,60 @@
                 android:layout_gravity="center" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
+                android:id="@+id/passwordSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="@string/password"
                 android:layout_gravity="center" />
-            <TextView
-                android:id="@+id/forgot_password"
-                android:layout_marginTop="@dimen/tenDP"
-                android:onClick="forgotPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/forgot_password"
-                android:textStyle="bold"
-                android:layout_gravity="end"/>
             <Button
                 android:layout_marginTop="@dimen/fourtyDP"
                 android:id="@+id/signUpButton"
                 android:textSize="20dp"
-                android:onClick="signInUser"
+                android:onClick="registerUser"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_in"
+                android:text="@string/signup"
                 android:background="@color/signup_button_background"
                 android:layout_gravity="center"/>
+
             <LinearLayout
                 android:layout_marginTop="@dimen/tenDP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/new_user"
+                    android:text="@string/have_account"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="@dimen/tenDP"
-                    android:onClick="gotoSignUp"
+                    android:onClick="gotoSignIn"
                     android:layout_height="wrap_content"
-                    android:text="@string/sign_up"
+                    android:text="@string/sign_in"
                     android:textSize="@dimen/fifteenDP"
                     android:textStyle="bold"
                     android:textColor="@color/sign_up"
                     android:layout_gravity="center"
                     android:backgroundTint="@color/main_background"
                     android:background="@color/main_background"/>
-                <ProgressBar
-                    android:id="@+id/progress_bar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:indeterminate="true"
-                    android:indeterminateTint="@color/sign_up"
-                    android:visibility="gone">
-                </ProgressBar>
-
-
-
-
             </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/sign_up"
+                android:visibility="gone">
+            </ProgressBar>
 
         </LinearLayout>
     </LinearLayout>
-
 </ScrollView>

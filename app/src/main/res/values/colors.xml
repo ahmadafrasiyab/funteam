@@ -6,4 +6,8 @@
     <color name="main_background">#20FF9800</color>
     <color name="black">#000000</color>
     <color name="signup_button_background">#C4333333</color>
+    <color name="login_color">#FDC677</color>
+    <color name="sign_up">#FDC677</color>
+    <color name="white">#FFFFFF</color>
+    <color name="type">#2FFF9800</color>
 </resources>

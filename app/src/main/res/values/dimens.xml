@@ -10,4 +10,7 @@
     <dimen name="fiftyDP">50dp</dimen>
     <dimen name="sixtyDP">60dp</dimen>
     <dimen name="thirtyFIveDP">35dp</dimen>
+    <dimen name="_45dp">45dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_18sp">18sp</dimen>
 </resources>

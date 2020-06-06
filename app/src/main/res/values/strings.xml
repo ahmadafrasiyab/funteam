@@ -10,4 +10,24 @@
     <string name="groups_coming_soon">GROUPS COMING SOON!</string>
     <string name="settings_coming_soon">SETTINGS COMING SOON!</string>
     <string name="profile_coming_soon">PROFILE COMING SOON!</string>
+    <string name="data_1">data1</string>
+    <string name="data_2">data2</string>
+    <string name="data_3">data3</string>
+    <string name="data_4">data4</string>
+    <string name="value1">value1</string>
+    <string name="value2">value2</string>
+    <string name="value3">value3</string>
+    <string name="value4">value4</string>
+    <string name="etFN">etFN</string>
+    <string name="etLN">etLn</string>
+    <string name="etU">etU</string>
+    <string name="etE">etE</string>
+    <string name="password">Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="new_user">New User?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="name">Name</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="sign_out">SIGN OUT</string>
 </resources>

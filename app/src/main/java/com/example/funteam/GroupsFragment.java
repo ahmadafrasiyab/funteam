@@ -12,14 +12,15 @@ import androidx.fragment.app.Fragment;
 
 public class GroupsFragment extends Fragment {
     View view;
+
     public GroupsFragment() {
     }
+
     @Nullable
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.settings_fragment, container,false);
+        view = inflater.inflate(R.layout.settings_fragment, container, false);
         return view;
     }
 }
-

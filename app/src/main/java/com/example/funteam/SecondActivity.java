@@ -15,8 +15,6 @@ public class SecondActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////
     private TabLayout tabLayout;
-    //private AppBarLayout appBarLayout;
-    private ViewPager viewPager;
     ////////////////////////////////////////////////////
 
     String firstNameString;
@@ -33,22 +31,23 @@ public class SecondActivity extends AppCompatActivity {
         //////////////////////////////////////////////////////
         tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager_id);
+        //private AppBarLayout appBarLayout;
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager_id);
         ////Adding Fragments
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
 
         Bundle bundle = new Bundle();
 
-        firstNameString = getIntent().getExtras().getString("value1");
-        lastNameString = getIntent().getExtras().getString("value2");
-        userNameString = getIntent().getExtras().getString("value3");
-        emailString = getIntent().getExtras().getString("value4");
+        firstNameString = getIntent().getExtras().getString(getString(R.string.value1));
+        lastNameString = getIntent().getExtras().getString(getString(R.string.value2));
+        userNameString = getIntent().getExtras().getString(getString(R.string.value3));
+        emailString = getIntent().getExtras().getString(getString(R.string.value4));
 
-        bundle.putString("data1", firstNameString);
-        bundle.putString("data2", lastNameString);
-        bundle.putString("data3", userNameString);
-        bundle.putString("data4", emailString);
+        bundle.putString(getString(R.string.data_1), firstNameString);
+        bundle.putString(getString(R.string.data_1), lastNameString);
+        bundle.putString(getString(R.string.data_1), userNameString);
+        bundle.putString(getString(R.string.data_1), emailString);
 
 
         adapter.AddFragment(new GroupsFragment(), "GROUPS");
