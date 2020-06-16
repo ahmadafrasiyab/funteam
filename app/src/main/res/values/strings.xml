@@ -10,4 +10,6 @@
     <string name="groups_coming_soon">GROUPS COMING SOON!</string>
     <string name="settings_coming_soon">SETTINGS COMING SOON!</string>
     <string name="profile_coming_soon">PROFILE COMING SOON!</string>
+
+    <string name="group_tab_name">GROUPS</string>
 </resources>
