@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    ////////////////////////
+    public void goToCreateJoin(View v){
+        Intent i = new Intent (MainActivity.this, CreateJoinGroup.class);
+        startActivity(i);
+
+    }
+    ////////////////////////
+
     public void signInUser(View v){
         progressBar.setVisibility(View.VISIBLE);
         String email = textEmail.getText().toString();

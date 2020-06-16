@@ -17,8 +17,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.funteam.Adapters.MessageAdapter;
+import com.example.funteam.Adapters.UploadAdapter;
 import com.example.funteam.Models.AllMethods;
 import com.example.funteam.Models.Message;
+import com.example.funteam.Models.Upload;
 import com.example.funteam.Models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,6 +40,10 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
     FirebaseDatabase firebaseDatabase;
     DatabaseReference messageDatabase;
     MessageAdapter messageAdapter;
+
+    UploadAdapter uploadAdapter;
+    DatabaseReference uploadDatabase;
+    List<Upload> uploads;
 
     User u;
     List<Message> messages;
@@ -69,6 +75,8 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
         imageButton = (ImageButton) findViewById(R.id.send_button);
         imageButton.setOnClickListener(this);
         messages = new ArrayList<>();
+
+        //uploads = new ArrayList<>();
 
     }
 
@@ -127,15 +135,6 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
         });
 
 
-
-
-
-
-
-
-
-
-
         messageDatabase = firebaseDatabase.getReference("messages");
         messageDatabase.addChildEventListener(new ChildEventListener() {
             @Override
@@ -147,8 +146,10 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
 
 
 
-
             }
+
+
+
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -204,12 +205,56 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
         });
 
 
+       /*
+        uploadDatabase = firebaseDatabase.getReference("memes/");
+        uploadDatabase.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                Upload upload = dataSnapshot.getValue(Upload.class);
+                upload.setName(dataSnapshot.getKey());
+                uploads.add(upload);
+                displayUploads(uploads);
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });*/
+
+
+
+
+
+
+    }
+
+    public void uploadPicture(View view){
+        Intent i = new Intent (GroupChatActivity.this, ImageUploadActivity.class);
+        startActivity(i);
     }
 
     @Override
     protected void onResume(){
         super.onResume();
         messages = new ArrayList<>();
+       // uploads = new ArrayList<>();
 
 
     }
@@ -218,6 +263,19 @@ public class GroupChatActivity extends AppCompatActivity implements View.OnClick
         messageAdapter = new MessageAdapter(GroupChatActivity.this, messages, messageDatabase);
         recyclerViewMessage.setAdapter(messageAdapter);
 
+    }
+
+
+
+  /* private void displayUploads(List<Upload> uploads) {
+        recyclerViewMessage.setLayoutManager(new LinearLayoutManager(GroupChatActivity.this));
+        uploadAdapter = new UploadAdapter(GroupChatActivity.this, uploads, messageDatabase);
+        recyclerViewMessage.setAdapter(uploadAdapter);
 
     }
+
+
+
+
+   */
 }
